@@ -4,6 +4,7 @@ package com.portfoliogdv.gdv.Controller;
 import com.portfoliogdv.gdv.Entity.Persona;
 import com.portfoliogdv.gdv.Interface.IPersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -21,6 +22,8 @@ public class PersonaController {
         return ipersonaService.getPersona();
     }
 
+
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/personas/crear")
     public String createPersona(@RequestBody Persona persona) {
         ipersonaService.savePersona(persona);
