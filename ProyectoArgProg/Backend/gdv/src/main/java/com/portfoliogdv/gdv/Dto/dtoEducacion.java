@@ -1,17 +1,18 @@
 package com.portfoliogdv.gdv.Dto;
 
+
 import javax.validation.constraints.NotBlank;
 
-public class DtoExperiencia {
+public class dtoEducacion {
     @NotBlank
     private String nombreE;
     @NotBlank
     private String descripcionE;
 
-    public DtoExperiencia() {
+    public dtoEducacion() {
     }
 
-    public DtoExperiencia(String nombreE, String descripcionE) {
+    public dtoEducacion(String nombreE, String descripcionE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
     }
@@ -31,4 +32,6 @@ public class DtoExperiencia {
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
     }
+
+
 }
